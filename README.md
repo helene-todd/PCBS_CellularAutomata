@@ -35,9 +35,9 @@ Once program is executed, press the spacebar to begin or pause the animation.
 ## The program
 Below are a few examples of patterns that can be obtained with the program :
 <div float="left">
-	<img src="https://github.com/helene-todd/PCBS_CellularAutomata/tree/master/gifs/animation1.gif" height="300">
-	<img src="https://github.com/helene-todd/PCBS_CellularAutomata/tree/master/gifs/animation2.gif" height="300">
-	<img src="https://github.com/helene-todd/PCBS_CellularAutomata/tree/master/gifs/animation3.gif" height="300">
+	<img src="gifs/animation1.gif" height="250">
+	<img src="gifs/animation2.gif" height="250">
+	<img src="gifs/animation3.gif" height="250">
 </div>
 
 (left : blinker, centre : pulsar, right : glider)
