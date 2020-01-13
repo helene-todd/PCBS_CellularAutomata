@@ -4,12 +4,15 @@ import pygame, random
 random.seed()
 
 class Automata_list() :
-    def __init__(self, n, l, m, proportion):
-        self.n = n
-        self.list = [[None]*n for k in range(n)]
-        for row in range(n):
-            for col in range(n):
-                if random.random() < proportion :
+
+    # Constructor for a display specified in text file
+    def __init__(self, grid, l, m):
+        self.columns = len(grid[0])
+        self.rows = len(grid)
+        self.list = [[None]*self.columns for k in range(self.rows)]
+        for row in range(self.rows):
+            for col in range(self.columns):
+                if grid[row][col] == '1' :
                     self.list[row][col] = Automaton(row, col, l, m, "alive")
                 else :
                     self.list[row][col] = Automaton(row, col, l, m, "dead")
@@ -29,31 +32,31 @@ class Automata_list() :
 
 
     def count_neighbours(self):
-        for i in range(self.n):
-            for j in range(self.n):
+        for i in range(self.rows):
+            for j in range(self.columns):
                 # Right
-                if j < self.n-1 and self.list[i][j+1] != None and self.list[i][j+1].isAlive():
+                if j < self.columns-1 and self.list[i][j+1] != None and self.list[i][j+1].isAlive():
                     self.list[i][j].neighbours += 1
                 # Left
                 if j > 0 and self.list[i][j-1] != None and self.list[i][j-1].isAlive():
                     self.list[i][j].neighbours += 1
                 # Up
-                if i < self.n-1 and self.list[i+1][j] != None and self.list[i+1][j].isAlive():
+                if i < self.rows-1 and self.list[i+1][j] != None and self.list[i+1][j].isAlive():
                     self.list[i][j].neighbours += 1
                 # Down
-                if i > 0 and  self.list[i-1][j] != None and self.list[i-1][j].isAlive():
+                if i > 0 and self.list[i-1][j] != None and self.list[i-1][j].isAlive():
                     self.list[i][j].neighbours += 1
                 # Bottom Right
-                if j < self.n-1 and i < self.n-1  and self.list[i+1][j+1] != None and self.list[i+1][j+1].isAlive():
+                if j < self.columns-1 and i < self.rows-1  and self.list[i+1][j+1] != None and self.list[i+1][j+1].isAlive():
                     self.list[i][j].neighbours += 1
                 # Bottom Left
-                if j > 0 and i < self.n-1  and self.list[i+1][j-1] != None and self.list[i+1][j-1].isAlive():
+                if j > 0 and i < self.rows-1 and self.list[i+1][j-1] != None and self.list[i+1][j-1].isAlive():
                     self.list[i][j].neighbours += 1
                 # Top Left
                 if j > 0 and i > 0 and self.list[i-1][j-1] != None and self.list[i-1][j-1].isAlive():
                     self.list[i][j].neighbours += 1
                 # Top Right
-                if j < self.n-1 and i > 0  and self.list[i-1][j+1] != None and self.list[i-1][j+1].isAlive():
+                if j < self.columns-1 and i > 0 and self.list[i-1][j+1] != None and self.list[i-1][j+1].isAlive():
                     self.list[i][j].neighbours += 1
 
 
