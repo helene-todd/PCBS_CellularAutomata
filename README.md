@@ -42,8 +42,8 @@ foo@bar:~$ python  main.py [-h] [-s int int] [-p float] [-f path] [-r int int in
 
 The optional arguments are the following :
 <ul style="list-style-type:none"> <li>-h, --help : a brief message about the program and detailed descriptions for each of the optional arguments. </li>
-<li> -s, --size : specify size of the grid (by default : 16 x 16) </li>
-<li> -p, --proportion : specify the proportion of cells on starting grid (by default : 0.33) </li>
+<li> -s, --size : specify size of the random starting grid (by default : 16 x 16) </li>
+<li> -p, --proportion : specify the proportion of cells on the random starting grid (by default : 0.33) </li>
 <li> -f --file : use a pre-defined starting grid stored in text file (by default : randomly generated) </li>
 <li> -r, --rules : specify the rules of the game of life (by default : 2 2 3) </li>
 </ul>
@@ -68,7 +68,7 @@ foo@bar:~$ python main.py -s 8 8 -p 0.2
 <p align="center"><img src="gifs/random_grid_p.gif" height="300"></p>  
 
 
-Initial grid was a randomly generated 8 x 8 grid, with a different set of rules (cell dies if less than 1 neighbour or more than 2 neighbours, and a new cell is born if there are 3 neighbours).
+Initial grid was a randomly generated 8 x 8 grid, with a different set of rules (a cell dies if it has less than 1 neighbour or more than 2 neighbours, and a new cell is born if there are 3 neighbours).
 ```console
 foo@bar:~$ python main.py -s 8 8 -r 1 2 3
 ```
