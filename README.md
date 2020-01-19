@@ -15,7 +15,7 @@ The rules for Conway's game of life are the following :
 3. Live cells with 4 or more live neighbours are sad and die from overcrowding.  
 4. Empty cells with exactly 3 live neighbours give rise to a newborn cell.  
 
-In this program, the default rules are Conway's rules. We can however define a new set of rules and observe how differently the automata behaves.
+In this program, the default rules are Conway's rules. We can however define a new set of rules and observe how differently the automaton behaves.
 
 Each cell is represented by a coloured square with a facial expression.  
 <ul style="list-style-type:circle" >
