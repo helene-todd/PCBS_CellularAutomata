@@ -108,7 +108,7 @@ foo@bar:~$ python main.py -f grids/oscillators/pulsar.txt -r 1 3 3
 As you can see, what was previously an oscillator is now still.
 
 ## What I learned 
-This project was challenging at times and I feel like I have learned a lot from it. Here are a few examples :
+This project was challenging at times and I feel like I have learned a lot from it. Here are a few examples of what I learned :
 
 <ul style="list-style-type:circle" >
 <li style="padding-left:4em"> What cellular automata are and what they can model
