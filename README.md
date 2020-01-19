@@ -59,13 +59,20 @@ A folder named "screen_capture" will have been created once the program has run.
 
 ### A few examples
 
-#### Randomly generated grid
+#### Randomly generated grids
   
 Initial grid was a randomly generated 8 x 8 grid, with a proportion of 0.2 live cells :
 ```console
 foo@bar:~$ python main.py -s 8 8 -p 0.2
 ```
-<p align="center"><img src="gifs/random_grid.gif" height="300"></p>
+<p align="center"><img src="gifs/random_grid_p.gif" height="300"></p>  
+
+
+Initial grid was a randomly generated 8 x 8 grid, with a different set of rules (cell dies if less than 1 neighbour or more than 2 neighbours, and dies if more than 3 neighbours).
+```console
+foo@bar:~$ python main.py -s 8 8 -r 1 2 3
+```
+<p align="center"><img src="gifs/random_grid_r.gif" height="300"></p>
 
 #### An example of blinkers
   
@@ -82,7 +89,6 @@ Initial grid was given by demo_glider.txt :
 foo@bar:~$ python main.py -f grids/demo_examples/demo_glider.txt
 ```
 <p align="center"><img src="gifs/demo_glider.gif" height="300"></p>
-
 
 ## What I learned 
 This project was challenging at times and I feel like I have learned a lot of new things from it. Here are a few examples :
