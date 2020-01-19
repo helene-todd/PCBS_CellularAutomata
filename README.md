@@ -7,7 +7,7 @@ During my bachelor degree in mathematics, I took a few basic programming courses
 ## Introduction
 
 A cellular automaton is a discrete dynamical system that models behaviours based on a certain set of rules. It is represented by a collection of cells in an infinite grid that evolve through time, depending on the states of their neighbours.
-The goal of this project is to implement John Conway's \"Game of Life" in python (using the PyGame library). Here, the grid will be a torus : https://en.wikipedia.org/wiki/Torus (essentially a compact space with no bordure). This allows to observe interesting behaviour we could not observe on a bounded grid.
+The goal of this project is to implement John Conway's \"Game of Life" in python (using the PyGame library). Here, the grid will be a torus : https://en.wikipedia.org/wiki/Torus (essentially a compact space with no bordure). Although it is not an infinite grid, we will still be able to observe interesting behaviour.
 
 The rules for Conway's game of life are the following :  
 1. Live cells with 2 or 3 live neighbours are happy and make it to the next round.  
