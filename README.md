@@ -121,7 +121,7 @@ This project was challenging at times and I feel like I have learned a lot from 
 
 ## Ideas to further improve the code
 <ul style="list-style-type:circle">
-<li style="padding-left:4em"> Check if program works on windows </li>
+<li style="padding-left:4em"> Check if program works on Windows </li>
 <li style="padding-left:4em"> Create a function to determine the convergence states </li>
 </ul>
 
