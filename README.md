@@ -91,7 +91,7 @@ foo@bar:~$ python main.py -f grids/demo_examples/demo_glider.txt
 <p align="center"><img src="gifs/demo_glider.gif" height="300"></p>
 
 #### An example of how changing the rules changes the outcome
-Initial grid was given by pulsar.txt :
+Initial grid was given by pulsar.txt, with default rules (a cell dies if it has strictly less than 2 neighbours or strictly more than 3 neighbours, and a new cell is born if there are exactly 3 neighbours) :
 ```console
 foo@bar:~$ python main.py -f grids/oscillators/pulsar.txt
 ```
@@ -100,7 +100,7 @@ As you can see, this oscillator is periodic, of period 3.
 
 However, when you change the rules even slightly, the automaton behaves in a completely different way. 
 
-Initial grid was given by pulsar.txt with a different set of rules (a cell dies if it has strictly less than 1 neighbour or strictly more than 3 neighbours, and a new cell is born if there are exactly 3 neighbours) :
+Initial grid was given by pulsar.txt, with a different set of rules (a cell dies if it has strictly less than 1 neighbour or strictly more than 3 neighbours, and a new cell is born if there are exactly 3 neighbours) :
 ```console
 foo@bar:~$ python main.py -f grids/oscillators/pulsar.txt -r 1 3 3 
 ```
