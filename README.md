@@ -101,7 +101,7 @@ Initial grid was given by pulsar.txt, with a different set of rules (a live cell
 foo@bar:~$ python main.py -f grids/oscillators/pulsar.txt -r 1 3 3 
 ```
 <p align="center"><img src="gifs/pulsar_r.gif" height="300"></p>
-As you can see, what was previously an oscillator is now still.
+As you can see, what was previously an oscillator now becomes a still state.
 
 ## Prior programming skills 
 
