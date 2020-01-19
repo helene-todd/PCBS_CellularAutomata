@@ -1,9 +1,5 @@
 # PCBS_CellularAutomata
 
-## Prior programming skills 
-
-During my bachelor degree in mathematics, I took a few basic programming courses : programming in C++, introduction to object-oriented programming in Java and introduction to Python.
-
 ## Introduction
 
 A cellular automaton is a discrete dynamical system that models behaviours based on a certain set of rules. It is represented by a collection of cells in an infinite grid that evolve through time, depending on the states of their neighbours.
@@ -106,6 +102,10 @@ foo@bar:~$ python main.py -f grids/oscillators/pulsar.txt -r 1 3 3
 ```
 <p align="center"><img src="gifs/pulsar_r.gif" height="300"></p>
 As you can see, what was previously an oscillator is now still.
+
+## Prior programming skills 
+
+During my bachelor degree in mathematics, I took a few basic programming courses : programming in C++, introduction to object-oriented programming in Java and introduction to Python.
 
 ## What I learned 
 This project was challenging at times and I feel like I have learned a lot from it. Here are a few examples of what I learned :
