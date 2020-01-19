@@ -26,8 +26,8 @@ parser.add_argument('-f', '--file',
     '   takes 1 argument : path to .txt file', nargs=1, metavar='path', type=str)
 parser.add_argument('-r', '--rules', help='specify rules of game\n'
     '   takes 3 integer arguments x y z : \n'
-    '     - 1st argument x : cell dies if less than x neighbours\n'
-    '     - 2nd argument y : cell dies if more than y neighbours\n'
+    '     - 1st argument x : cell dies if strictly less than x neighbours\n'
+    '     - 2nd argument y : cell dies if strictly more than y neighbours\n'
     '     - 3rd argument z : cell is born if exactly z neighbours\n', nargs=3, metavar='int', type=int)
 args = parser.parse_args()
 
