@@ -20,7 +20,7 @@ parser.add_argument('-s', '--size',
     '  takes 2 integer arguments : row_size column_size', nargs=2, metavar='int', type=int)
 parser.add_argument('-p', '--proportion',
     help='specify proportion of cells on initial grid \n'
-    '   takes 1 integer argument : proportion (between 0 and 1)', nargs=1, metavar='float', type=float)
+    '   takes 1 float argument : proportion (between 0 and 1)', nargs=1, metavar='float', type=float)
 parser.add_argument('-f', '--file',
     help='specify a text file as starting grid \n'
     '   takes 1 argument : path to .txt file', nargs=1, metavar='path', type=str)
@@ -46,15 +46,21 @@ if args.file is not None : #need to test on windows
 elif args.size is not None :
     str_arguments = f"File opened : None \n"
     p = .33
-    if args.proportion is not None and args.proportion[0] >= 0 and args.proportion[0] <= 1 :
-        p = args.proportion[0]
+    if args.proportion is not None :
+        if args.proportion[0] >= 0 and args.proportion[0] <= 1 :
+            p = args.proportion[0]
+        else :
+            print("The proportion you gave was not valid. Default value was used.")
     grid = [['1' if random.random() < p else '0' for i in range(args.size[1])] for j in range(args.size[0])]
     str_arguments += f"Proportion of cells : {p} \n"
     str_arguments += f"Grid size : {args.size[0]} rows x {args.size[1]} columns \n"
 else :
     p = .33
-    if args.proportion is not None and args.proportion[0] >= 0 and args.proportion[0] <= 1 :
-        p = args.proportion[0]
+    if args.proportion is not None :
+        if args.proportion[0] >= 0 and args.proportion[0] <= 1 :
+            p = args.proportion[0]
+        else :
+            print("The proportion you gave was not valid. Default value was used.")
     grid = [['1' if random.random() < p else '0' for i in range(16)] for j in range(16)] # Default grid
     str_arguments += f"Proportion of cells : {p} \n"
     str_arguments += "Grid size : 16 rows x 16 columns \n"
