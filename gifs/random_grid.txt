@@ -1,0 +1,4 @@
+File opened : None 
+Proportion of cells : 0.2 
+Grid size : 8 rows x 8 columns 
+Rules : [2, 3, 3] 
