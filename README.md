@@ -54,7 +54,7 @@ foo@bar:~$ python main.py --help
 ```
 Once the program is executed, press the space bar to begin or pause the animation.
 
-A folder named "screen_capture" will have been created once the program has run. The forder contains screen captures of the automata at each state and a text file with details about which arguments were used when executing the program.
+A folder named "screen_capture" will have been created once the program has run. The forder contains screen captures of the automaton at each state and a text file with details about which arguments were used when executing the program.
 <br>
 
 ### A few examples
