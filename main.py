@@ -24,7 +24,8 @@ parser.add_argument('-p', '--proportion',
 parser.add_argument('-f', '--file',
     help='specify a text file as starting grid \n'
     '   takes 1 argument : path to .txt file', nargs=1, metavar='path', type=str)
-parser.add_argument('-r', '--rules', help='specify rules of game\n'
+parser.add_argument('-r', '--rules',
+    help='specify rules of game\n'
     '   takes 3 integer arguments x y z : \n'
     '     - 1st argument x : cell dies if strictly less than x neighbours\n'
     '     - 2nd argument y : cell dies if strictly more than y neighbours\n'
@@ -80,7 +81,7 @@ rows = len(grid)
 # Initialise pygame
 pygame.init()
 
-# Length of one cell depending on row to column ratio (to define an appropriate size on screen)
+# Length of one cell depending on screen width and height
 l = min(int((4./5)*pygame.display.Info().current_h/rows), int((4./5)*pygame.display.Info().current_w/columns))
 # Margin (size of space between cells)
 m = (int(0.04*l))
