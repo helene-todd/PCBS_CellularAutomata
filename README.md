@@ -41,11 +41,11 @@ foo@bar:~$ python  main.py [-h] [-s int int] [-p float] [-f path] [-r int int in
 ```
 
 The optional arguments are the following :
-<ul style="list-style-type:none"> <li>-h, --help : a brief message about the program and detailed descriptions for each of the optional arguments. </li>
+<ul style="list-style-type:none"> <li>-h, --help : a brief message about the program and detailed descriptions for each of the optional arguments </li>
 <li> -s, --size : specify size of the random starting grid (by default : 16 x 16) </li>
 <li> -p, --proportion : specify the proportion of cells on the random starting grid (by default : 0.33) </li>
 <li> -f --file : use a pre-defined starting grid stored in text file (by default : randomly generated) </li>
-<li> -r, --rules : specify the rules of the game of life (by default : 2 2 3) </li>
+<li> -r, --rules : specify the rules of the game of life (by default : 2 3 3) </li>
 </ul>
 
 You will find a more detailed description for each of the optional arguments via the terminal :
@@ -68,7 +68,7 @@ foo@bar:~$ python main.py -s 8 8 -p 0.2
 <p align="center"><img src="gifs/random_grid_p.gif" height="300"></p>  
 
 
-Initial grid was a randomly generated 8 x 8 grid, with a different set of rules (a cell dies if it has less than 1 neighbour or more than 2 neighbours, and a new cell is born if there are 3 neighbours).
+Initial grid was a randomly generated 8 x 8 grid, with a different set of rules (a cell dies if it has strictly less than 1 neighbour or strictly more than 2 neighbours, and a new cell is born if there are exactly 3 neighbours).
 ```console
 foo@bar:~$ python main.py -s 8 8 -r 1 2 3
 ```
@@ -90,8 +90,25 @@ foo@bar:~$ python main.py -f grids/demo_examples/demo_glider.txt
 ```
 <p align="center"><img src="gifs/demo_glider.gif" height="300"></p>
 
+#### An example of how changing the rules changes the outcome
+Initial grid was given by pulsar.txt :
+```console
+foo@bar:~$ python main.py -f grids/oscillators/pulsar.txt
+```
+<p align="center"><img src="gifs/pulsar.gif" height="300"></p>
+As you can see, this oscillator is periodic, of period 3.  
+
+However, when you change the rules even slightly, the automaton behaves in a completely different way. 
+
+Initial grid was given by pulsar.txt with a different set of rules (a cell dies if it has strictly less than 1 neighbour or strictly more than 3 neighbours, and a new cell is born if there are exactly 3 neighbours) :
+```console
+foo@bar:~$ python main.py -f grids/oscillators/pulsar.txt -r 1 3 3 
+```
+<p align="center"><img src="gifs/pulsar_r.gif" height="300"></p>
+As you can see, what was previously an oscillator is now still.
+
 ## What I learned 
-This project was challenging at times and I feel like I have learned a lot of new things from it. Here are a few examples :
+This project was challenging at times and I feel like I have learned a lot from it. Here are a few examples :
 
 <ul style="list-style-type:circle" >
 <li style="padding-left:4em"> What cellular automata are and what they can model
@@ -99,12 +116,13 @@ This project was challenging at times and I feel like I have learned a lot of ne
 <li style="padding-left:4em"> The basics of PyGame and ArgParse </li>
 <li style="padding-left:4em"> How to use Git </li>
 <li style="padding-left:4em"> How to write a README.md file </li>
+<li style="padding-left:4em"> How to write Docstrings </li>
 </ul>
 
 ## Ideas to further improve the code
 <ul style="list-style-type:circle">
 <li style="padding-left:4em"> Check if program works on windows </li>
-<li style="padding-left:4em"> Create a function to determine automata convergence states </li>
+<li style="padding-left:4em"> Create a function to determine the convergence states </li>
 </ul>
 
 

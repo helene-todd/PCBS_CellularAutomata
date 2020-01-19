@@ -1,0 +1,2 @@
+File opened : grids/demo_examples/demo_pulsar.txt 
+Rules : [2, 3, 3] 

@@ -1,0 +1,2 @@
+File opened : grids/oscillators/pulsar.txt 
+Rules : [1, 3, 3] 

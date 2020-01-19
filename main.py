@@ -35,10 +35,14 @@ args = parser.parse_args()
 str_arguments = ""
 
 # Check arguments for initial grid
-if args.file is not None and os.path.exists(args.file[0]): #need to test on windows
-    str_arguments = f"File opened : {args.file[0]} \n"
-    with open(args.file[0], 'r') as f:
-        grid = [line.replace('\n','').split(' ') for line in f if line !='\n']
+if args.file is not None : #need to test on windows
+    if os.path.exists(args.file[0]):
+        str_arguments = f"File opened : {args.file[0]} \n"
+        with open(args.file[0], 'r') as f:
+            grid = [line.replace('\n','').split(' ') for line in f if line !='\n']
+    else:
+        print("Error : path to file does not appear to exist")
+        sys.exit(0)
 elif args.size is not None :
     str_arguments = f"File opened : None \n"
     p = .33
@@ -93,14 +97,14 @@ text = font.render('Press [space bar] to start / pause', True, BLACK)
 textRect = text.get_rect()
 # Center text in middle of screen using rectangle
 textRect.center = (W // 2, H // 2)
-# Blit the text and rectangle together
+# Blit text and rectangle together
 screen.blit(text, textRect)
 # Update Screen
 pygame.display.update()
 
 
-# New list of automata
-automata_list = Automata_list(grid, l, m, rules)
+# New cellular automaton
+automaton = CellularAutomaton(grid, l, m, rules)
 
 # Initialise pygame's clock
 clock = pygame.time.Clock()
@@ -120,6 +124,7 @@ with open('screen_captures/optional_arguments.txt','w') as f:
 
 
 i = 0
+# Arbitrary upper bound for number of screen captures
 bound = columns*rows
 while True:
 
@@ -140,9 +145,9 @@ while True:
     if start == True:
 
         screen.fill(BLACK)
-        automata_list.display(screen)
+        automaton.display(screen)
         pygame.display.update()
-        automata_list.update()
+        automaton.update()
 
         if i <= bound :
             pygame.image.save(screen, f"screen_captures/{i}.jpeg")
