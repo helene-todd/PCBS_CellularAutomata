@@ -37,7 +37,7 @@ foo@bar:~$ pip3 install pygame pypi argparse os-sys
 
 The program can be executed via command line :
 ```console
-foo@bar:~$ python  main.py [-h] [-s int int] [-p float] [-f path] [-r int int int]
+foo@bar:~$ python main.py [-h] [-s int int] [-p float] [-f path] [-r int int int]
 ```
 
 The optional arguments are the following :
