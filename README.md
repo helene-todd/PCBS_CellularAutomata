@@ -31,7 +31,7 @@ foo@bar:~$ pip3 install pygame argparse os-sys
 
 ### How to run it
 
-The program can be executed via command line :
+The program can be executed via the terminal :
 ```console
 foo@bar:~$ python main.py [-h] [-s int int] [-p float] [-f path] [-r int int int]
 ```
@@ -105,7 +105,7 @@ As you can see, what was previously an oscillator now becomes a still state.
 
 ## Prior programming skills 
 
-During my bachelor degree in mathematics, I took a few basic programming courses : programming in C++, introduction to object-oriented programming in Java and introduction to Python.
+During my bachelor's degree in mathematics, I took a few basic programming courses : programming in C++, introduction to object-oriented programming in Java and introduction to Python.
 
 ## What I learned 
 This project was challenging at times and I feel like I have learned a lot from it. Here are a few examples of what I learned :
