@@ -19,7 +19,7 @@ In this program, the default rules are Conway's rules. We can however define a n
 
 Each cell is represented by a coloured square with a facial expression.  
 <ul style="list-style-type:circle" >
-<li style="padding-left:4em"> A cell is happy when it is surrounded by the ideal number of neighbours. It will make ot to the next round. </li>
+<li style="padding-left:4em"> A cell is happy when it is surrounded by the ideal number of neighbours. It will make it to the next round. </li>
 <li style="padding-left:4em"> A cell is sad when it is isolated or overcrowded. It will be dead by the next round. </li>
 <li style="padding-left:4em"> Light pink and light blue cells represent newborn cells. </li>
 </ul>
