@@ -29,7 +29,7 @@ Each cell is represented by a coloured square with a facial expression.
 
 This program requires Python 3 and a few python packages which can be installed by using pip in the command line : 
 ```console
-foo@bar:~$ pip3 install pygame pypi argparse os-sys 
+foo@bar:~$ pip3 install pygame argparse os-sys 
 ```
 ## The Program
 
@@ -97,6 +97,7 @@ foo@bar:~$ python main.py -f grids/oscillators/pulsar.txt
 ```
 <p align="center"><img src="gifs/pulsar.gif" height="300"></p>
 As you can see, this oscillator is periodic, of period 3.  
+
 
 However, when you change the rules even slightly, the automaton behaves in a completely different way. 
 
